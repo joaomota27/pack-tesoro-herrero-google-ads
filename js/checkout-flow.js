@@ -1,6 +1,6 @@
 (() => {
   const professionalCheckout = 'https://pay.hotmart.com/V107124548Y?off=5a4fv5en&checkoutMode=10';
-  const basicCheckout = 'https://pay.hotmart.com/H106059168P?off=jicr4c7c&checkoutMode=10';
+  const basicCheckout = 'https://pay.hotmart.com/V107124548Y?off=wiadlk9x&checkoutMode=10';
   const standardProfessionalCheckout = 'https://pay.hotmart.com/V107124548Y?off=i32j0u8c&checkoutMode=10';
 
   const style = document.createElement('style');
