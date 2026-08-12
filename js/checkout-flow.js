@@ -86,7 +86,13 @@
       if (label === 'QUIERO ESTE PACK AHORA') {
         element.addEventListener('click', (event) => { event.preventDefault(); openUpsell(); });
       }
-      if (label === 'OBTENER ACCESO AHORA' || label === 'VER EL PAQUETE COMPLETO' || label === 'ACCEDER AL PACK COMPLETO') {
+      if (label === 'OBTENER ACCESO AHORA' || label === 'VER EL PAQUETE COMPLETO') {
+        element.addEventListener('click', (event) => {
+          event.preventDefault();
+          document.getElementById('comprar')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      }
+      if (label === 'ACCEDER AL PACK COMPLETO') {
         element.addEventListener('click', (event) => { event.preventDefault(); goTo(standardProfessionalCheckout); });
       }
     });
