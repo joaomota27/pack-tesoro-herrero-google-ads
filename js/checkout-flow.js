@@ -2,6 +2,8 @@
   const professionalCheckout = 'https://pay.hotmart.com/V107124548Y?off=5a4fv5en&checkoutMode=10';
   const basicCheckout = 'https://pay.hotmart.com/V107124548Y?off=lnolqs4p&checkoutMode=10';
   const standardProfessionalCheckout = 'https://pay.hotmart.com/V107124548Y?off=i32j0u8c&checkoutMode=10';
+  const trackingKeys = ['fbclid', 'sck', 'xcod', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+  const trackingStorageKey = 'hotmart-checkout-tracking';
 
   const style = document.createElement('style');
   style.textContent = `
@@ -25,7 +27,26 @@
   `;
   document.head.appendChild(style);
 
-  const goTo = (url) => { window.location.assign(url); };
+  function getTrackingParameters() {
+    const parameters = new URLSearchParams(window.location.search);
+    const saved = new URLSearchParams(sessionStorage.getItem(trackingStorageKey) || '');
+
+    trackingKeys.forEach((key) => {
+      const value = parameters.get(key);
+      if (value) saved.set(key, value);
+    });
+
+    if ([...saved].length) sessionStorage.setItem(trackingStorageKey, saved.toString());
+    return saved;
+  }
+
+  const goTo = (url) => {
+    const checkout = new URL(url);
+    getTrackingParameters().forEach((value, key) => {
+      if (!checkout.searchParams.has(key)) checkout.searchParams.set(key, value);
+    });
+    window.location.assign(checkout.toString());
+  };
 
   function createUpsellModal() {
     const overlay = document.createElement('div');
@@ -81,6 +102,7 @@
   }
 
   document.addEventListener('DOMContentLoaded', () => {
+    getTrackingParameters();
     document.querySelectorAll('button, a').forEach((element) => {
       const label = element.textContent.trim();
       if (label === 'QUIERO ESTE PACK AHORA') {
