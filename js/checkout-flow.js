@@ -2,7 +2,7 @@
   const professionalCheckout = 'https://pay.hotmart.com/V107124548Y?off=5a4fv5en&checkoutMode=10';
   const basicCheckout = 'https://pay.hotmart.com/V107124548Y?off=lnolqs4p&checkoutMode=10';
   const standardProfessionalCheckout = 'https://pay.hotmart.com/V107124548Y?off=i32j0u8c&checkoutMode=10';
-  const trackingKeys = ['fbclid', 'sck', 'xcod', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+  const trackingKeys = ['fbclid', 'gclid', 'gbraid', 'wbraid', 'sck', 'xcod', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
   const trackingStorageKey = 'hotmart-checkout-tracking';
 
   const style = document.createElement('style');
