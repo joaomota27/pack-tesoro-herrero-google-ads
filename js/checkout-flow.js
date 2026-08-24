@@ -1,7 +1,7 @@
-(() => {
-  const professionalCheckout = 'https://pay.hotmart.com/V107124548Y?off=5a4fv5en&checkoutMode=10';
-  const basicCheckout = 'https://pay.hotmart.com/V107124548Y?off=lnolqs4p&checkoutMode=10';
-  const standardProfessionalCheckout = 'https://pay.hotmart.com/V107124548Y?off=i32j0u8c&checkoutMode=10';
+﻿(() => {
+  const professionalCheckout = 'https://pay.hotmart.com/V107124548Y?off=x0snxq86&checkoutMode=10';
+  const basicCheckout = 'https://pay.hotmart.com/V107124548Y?off=oyurn19d&checkoutMode=10';
+  const standardProfessionalCheckout = 'https://pay.hotmart.com/V107124548Y?off=z1ax73fa&checkoutMode=10';
   const trackingKeys = ['fbclid', 'gclid', 'gbraid', 'wbraid', 'sck', 'xcod', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
   const trackingStorageKey = 'hotmart-checkout-tracking';
 
@@ -19,7 +19,7 @@
     .checkout-upsell-price b { display:block; font-size:38px; line-height:1.1; margin:3px 0; }
     .checkout-upsell-price b span { font-size:19px; }
     .checkout-upsell-card ul { margin:12px 0; padding:0; list-style:none; text-align:left; font-size:12px; line-height:1.55; }
-    .checkout-upsell-card li::before { content:'✓'; color:#f59e0b; font-weight:bold; margin-right:8px; }
+    .checkout-upsell-card li::before { content:'âœ“'; color:#f59e0b; font-weight:bold; margin-right:8px; }
     .checkout-upsell-card button { width:100%; border-radius:7px; padding:13px 12px; border:0; font-weight:800; text-transform:uppercase; cursor:pointer; }
     .checkout-upsell-professional { background:#f59e0b; color:#111; }
     .checkout-upsell-basic { margin-top:8px; color:#e5e7eb; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.25) !important; font-size:11px; }
@@ -57,25 +57,25 @@
     overlay.innerHTML = `
       <div class="checkout-upsell-backdrop"></div>
       <div class="checkout-upsell-card">
-        <button class="checkout-upsell-close" type="button" aria-label="Cerrar">×</button>
-        <h3 id="checkout-upsell-title">¡ESPERA! No cierres todavía…</h3>
+        <button class="checkout-upsell-close" type="button" aria-label="Cerrar">Ã—</button>
+        <h3 id="checkout-upsell-title">Â¡ESPERA! No cierres todavÃ­aâ€¦</h3>
         <img src="images/pack-hero-560-Ds-o04m7.webp" alt="Pack Tesoro del Herrero - Kit Profesional">
         <p>Suma <strong>+1.000 proyectos extras</strong> y los <strong>4 bonos exclusivos</strong> al Kit Profesional.</p>
         <div class="checkout-upsell-price">
-          <small>Valor real <s>US$97</s> · Hoy, solo por esta página</small>
-          <b><span>US$</span>3.49</b>
-          <small>Menos que un almuerzo · Acceso de por vida</small>
+          <small>Valor real <s>US$79.90</s> Â· Oferta especial solo en esta pÃ¡gina</small>
+          <b><span>US$</span>14.90</b>
+          <small>Ahorra frente al precio normal Â· Acceso de por vida</small>
         </div>
         <ul>
           <li>+1.000 proyectos extras (total +4.000)</li>
-          <li>BONO 1: Planilla automática de precios</li>
+          <li>BONO 1: Planilla automÃ¡tica de precios</li>
           <li>BONO 2: Lista de proveedores confiables</li>
-          <li>BONO 3: Guía: cuánto cobrar sin perder dinero</li>
-          <li>BONO 4: Proyectos más solicitados en ciudades pequeñas</li>
+          <li>BONO 3: GuÃ­a: cuÃ¡nto cobrar sin perder dinero</li>
+          <li>BONO 4: Proyectos mÃ¡s solicitados en ciudades pequeÃ±as</li>
           <li>Acceso digital de por vida</li>
         </ul>
-        <button type="button" class="checkout-upsell-professional">¡SÍ! QUIERO EL PACK COMPLETO</button>
-        <button type="button" class="checkout-upsell-basic">No, continuar solo con el Kit Básico</button>
+        <button type="button" class="checkout-upsell-professional">Â¡SÃ! QUIERO EL PACK COMPLETO</button>
+        <button type="button" class="checkout-upsell-basic">No, continuar solo con el Kit BÃ¡sico</button>
       </div>`;
 
     const close = () => overlay.remove();
