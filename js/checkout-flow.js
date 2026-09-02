@@ -62,7 +62,7 @@
         <img src="images/pack-hero-560-Ds-o04m7.webp" alt="Pack Tesoro del Herrero - Kit Profesional">
         <p>Suma <strong>+1.000 proyectos extras</strong> y los <strong>4 bonos exclusivos</strong> al Kit Profesional.</p>
         <div class="checkout-upsell-price">
-          <small>Valor real <s>US$79.90</s> · Oferta especial solo en esta página</small>
+          <small>Valor real <s>US$59.90</s> · Oferta especial solo en esta página</small>
           <b><span>US$</span>14.90</b>
           <small>Ahorra frente al precio normal · Acceso de por vida</small>
         </div>
